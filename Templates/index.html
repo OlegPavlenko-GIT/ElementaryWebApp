@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hey, guys</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffecb3; /* Желтый цвет (замените на нужный) */
+        }
+
+        .centered-text {
+            text-align: center;
+        }
+
+        .download-link {
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-    <h1>Let's get it started</h1>
-    <p>Our day is:</p>
-    <img src="/static/my_image.jpg" alt="Date">
+    <div class="centered-text">
+        <h1>How to Achieve Peace</h1>
+        <p>Please Click to download PDF book</p>
+        <a class="download-link" href="{{ url_for('static', filename='How_to_achieve_Peace.pdf')}}">Download PDF Book</a>
+        <p>This book is also available in English:</p>
+        <p><a href="https://achieve-peace.wordpress.com">https://achieve-peace.wordpress.com</a></p>
+        <p>&nbsp;</p>
+        <p>Thank you for paying attention!</p>
+    </div>
 </body>
 </html>

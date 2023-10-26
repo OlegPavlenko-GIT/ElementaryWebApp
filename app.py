@@ -19,5 +19,19 @@ def index():
 if __name__ == '__main__':
     app.run()
 
+from flask import Flask, render_template, send_file
+
+app = Flask(__name)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/download_pdf')
+def download_pdf():
+    return send_file('static/How_to_achieve_Peace.pdf', as_attachment=True)
+
+if __name__ == '__main__':
+    app.run()
 
 
